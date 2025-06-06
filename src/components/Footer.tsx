@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center mb-4">
               <TrendingUp className="w-8 h-8 text-blue-400 mr-3" />
-              <h3 className="text-2xl font-bold">VentureFlow</h3>
+              <h3 className="text-2xl font-bold">VEmpower Ventures</h3>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
               Empowering the next generation of innovative startups through strategic investment, 
@@ -45,7 +45,7 @@ const Footer = () => {
             <div className="space-y-3 text-gray-300">
               <div className="flex items-center">
                 <Mail className="w-4 h-4 mr-3 text-blue-400" />
-                <span className="text-sm">pitch@ventureflow.com</span>
+                <span className="text-sm">pitch@vempowerventures.com</span>
               </div>
               <div className="flex items-center">
                 <Phone className="w-4 h-4 mr-3 text-blue-400" />
@@ -63,7 +63,7 @@ const Footer = () => {
 
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="text-gray-400 text-sm">
-            © 2024 VentureFlow. All rights reserved.
+            © 2024 VEmpower Ventures. All rights reserved.
           </div>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a href="#" className="text-gray-400 hover:text-blue-400 text-sm transition-colors">Privacy Policy</a>

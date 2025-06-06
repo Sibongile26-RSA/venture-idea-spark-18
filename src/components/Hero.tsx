@@ -16,7 +16,7 @@ const Hero = () => {
         <div className="flex items-center justify-center mb-6">
           <TrendingUp className="w-12 h-12 text-blue-400 mr-4" />
           <h1 className="text-6xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-            VentureFlow
+            VEmpower Ventures
           </h1>
         </div>
         
