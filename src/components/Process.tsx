@@ -92,7 +92,7 @@ const Process = () => {
             </div>
             <div>
               <h4 className="text-lg font-semibold text-indigo-400 mb-2">Sectors</h4>
-              <p className="text-gray-300">EdTech, Healthcare, Sustainability, Tech & Innovation</p>
+              <p className="text-gray-300">EdTech, Healthcare, Tech & Innovation</p>
             </div>
           </div>
         </div>
