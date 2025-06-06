@@ -84,7 +84,7 @@ const Process = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
             <div>
               <h4 className="text-lg font-semibold text-blue-400 mb-2">Investment Range</h4>
-              <p className="text-gray-300">$100K - $5M</p>
+              <p className="text-gray-300">$10K - $3M</p>
             </div>
             <div>
               <h4 className="text-lg font-semibold text-purple-400 mb-2">Stage Focus</h4>
@@ -92,7 +92,7 @@ const Process = () => {
             </div>
             <div>
               <h4 className="text-lg font-semibold text-indigo-400 mb-2">Sectors</h4>
-              <p className="text-gray-300">Tech, AI, CleanTech, HealthTech</p>
+              <p className="text-gray-300">EdTech, Healthcare, Sustainability, Tech & Innovation</p>
             </div>
           </div>
         </div>
