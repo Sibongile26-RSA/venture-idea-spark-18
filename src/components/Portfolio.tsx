@@ -6,52 +6,22 @@ import { ExternalLink } from "lucide-react";
 const Portfolio = () => {
   const companies = [
     {
-      name: "TechFlow AI",
-      sector: "Artificial Intelligence",
-      stage: "Series A",
-      description: "Advanced machine learning platform for enterprise automation and decision-making.",
-      image: "photo-1488590528505-98d2b5aba04b",
-      funding: "$3.2M"
-    },
-    {
-      name: "GreenEnergy Solutions",
-      sector: "Clean Tech",
-      stage: "Seed",
-      description: "Renewable energy storage systems for residential and commercial applications.",
-      image: "photo-1461749280684-dccba630e2f6",
-      funding: "$1.8M"
-    },
-    {
-      name: "HealthTech Pro",
-      sector: "Healthcare",
-      stage: "Series A",
-      description: "Digital health platform connecting patients with healthcare providers seamlessly.",
-      image: "photo-1486312338219-ce68d2c6f44d",
-      funding: "$4.1M"
-    },
-    {
-      name: "FinanceAI",
-      sector: "FinTech",
-      stage: "Pre-Seed",
-      description: "AI-powered financial analytics and risk assessment for small businesses.",
-      image: "photo-1581091226825-a6a2a5aee158",
-      funding: "$850K"
-    },
-    {
-      name: "LogiChain",
-      sector: "Supply Chain",
-      stage: "Seed",
-      description: "Blockchain-based supply chain transparency and tracking solutions.",
-      image: "photo-1531297484001-80022131f5a1",
-      funding: "$2.5M"
-    },
-    {
-      name: "EduNext",
+      name: "4excelerate",
       sector: "EdTech",
       stage: "Series A",
-      description: "Interactive learning platform with AI-powered personalized education paths.",
+      description: "Accelerating educational excellence through innovative learning platforms and student development programs.",
       image: "photo-1498050108023-c5249f4df085",
-      funding: "$3.7M"
+      funding: "$2.1M",
+      website: "4excelerate.org"
+    },
+    {
+      name: "Globally Recruit",
+      sector: "HR Tech",
+      stage: "Seed", 
+      description: "Global recruitment platform connecting talented professionals with opportunities worldwide.",
+      image: "photo-1486312338219-ce68d2c6f44d",
+      funding: "$1.5M",
+      website: "globallyrecruit.net"
     }
   ];
 
@@ -67,7 +37,7 @@ const Portfolio = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 justify-center max-w-4xl mx-auto">
           {companies.map((company, index) => (
             <Card key={index} className="group overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border-0">
               <div className="relative h-48 overflow-hidden">
@@ -98,7 +68,10 @@ const Portfolio = () => {
                     <span className="text-sm text-gray-500 mr-2">Funding:</span>
                     <span className="font-semibold text-green-600">{company.funding}</span>
                   </div>
-                  <ExternalLink className="w-5 h-5 text-gray-400 group-hover:text-blue-600 transition-colors duration-300 cursor-pointer" />
+                  <div className="flex items-center">
+                    <span className="text-sm text-gray-500 mr-2">{company.website}</span>
+                    <ExternalLink className="w-5 h-5 text-gray-400 group-hover:text-blue-600 transition-colors duration-300 cursor-pointer" />
+                  </div>
                 </div>
               </CardContent>
             </Card>
