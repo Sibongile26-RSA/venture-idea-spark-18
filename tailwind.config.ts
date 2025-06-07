@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -20,10 +19,10 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'sans': ['Inter', 'system-ui', 'sans-serif'],
-				'serif': ['Playfair Display', 'Georgia', 'serif'],
-				'inter': ['Inter', 'system-ui', 'sans-serif'],
-				'playfair': ['Playfair Display', 'Georgia', 'serif'],
+				'sans': ['JetBrains Mono', 'Space Mono', 'monospace'],
+				'mono': ['JetBrains Mono', 'Space Mono', 'monospace'],
+				'jetbrains': ['JetBrains Mono', 'monospace'],
+				'space': ['Space Mono', 'monospace'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
