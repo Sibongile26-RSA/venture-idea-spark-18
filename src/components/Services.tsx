@@ -40,10 +40,10 @@ const Services = () => {
     <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl font-playfair font-bold text-gray-900 mb-4">
             How We Accelerate Your Success
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl font-inter font-light text-gray-600 max-w-3xl mx-auto">
             Our comprehensive support ecosystem is designed to transform promising startups into industry leaders
           </p>
         </div>
@@ -57,10 +57,10 @@ const Services = () => {
                     <service.icon className="w-8 h-8 text-blue-600 group-hover:text-purple-600 transition-colors duration-300" />
                   </div>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-blue-900 transition-colors duration-300">
+                <h3 className="text-xl font-playfair font-semibold text-gray-900 mb-3 group-hover:text-blue-900 transition-colors duration-300">
                   {service.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-600 leading-relaxed font-inter font-light">
                   {service.description}
                 </p>
               </CardContent>
