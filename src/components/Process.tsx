@@ -1,3 +1,4 @@
+
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, Send, Users, Zap, TrendingUp } from "lucide-react";
 
@@ -39,10 +40,10 @@ const Process = () => {
     <section className="py-20 bg-gradient-to-br from-slate-900 to-blue-900">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-jetbrains font-bold text-white mb-4">
+          <h2 className="text-4xl font-bold text-white mb-4">
             Our Investment Process
           </h2>
-          <p className="text-xl font-jetbrains font-light text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             A transparent, efficient pathway from initial pitch to strategic partnership
           </p>
         </div>
@@ -61,14 +62,14 @@ const Process = () => {
                         <step.icon className="w-8 h-8 text-white" />
                       </div>
                       <div className="absolute -top-2 -right-2 w-8 h-8 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
-                        <span className="text-white text-sm font-jetbrains font-bold">{step.step}</span>
+                        <span className="text-white text-sm font-bold">{step.step}</span>
                       </div>
                     </div>
                     
-                    <h3 className="text-xl font-jetbrains font-semibold text-white mb-3">
+                    <h3 className="text-xl font-semibold text-white mb-3">
                       {step.title}
                     </h3>
-                    <p className="text-gray-300 leading-relaxed text-sm font-jetbrains font-light">
+                    <p className="text-gray-300 leading-relaxed text-sm">
                       {step.description}
                     </p>
                   </CardContent>
@@ -79,19 +80,19 @@ const Process = () => {
         </div>
 
         <div className="mt-16 bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-          <h3 className="text-2xl font-jetbrains font-bold text-white mb-4 text-center">Investment Criteria</h3>
+          <h3 className="text-2xl font-bold text-white mb-4 text-center">Investment Criteria</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
             <div>
-              <h4 className="text-lg font-jetbrains font-semibold text-blue-400 mb-2">Investment Range</h4>
-              <p className="text-gray-300 font-jetbrains font-light">$10K - $3M</p>
+              <h4 className="text-lg font-semibold text-blue-400 mb-2">Investment Range</h4>
+              <p className="text-gray-300">$10K - $3M</p>
             </div>
             <div>
-              <h4 className="text-lg font-jetbrains font-semibold text-purple-400 mb-2">Stage Focus</h4>
-              <p className="text-gray-300 font-jetbrains font-light">Pre-Seed to Series A</p>
+              <h4 className="text-lg font-semibold text-purple-400 mb-2">Stage Focus</h4>
+              <p className="text-gray-300">Pre-Seed to Series A</p>
             </div>
             <div>
-              <h4 className="text-lg font-jetbrains font-semibold text-indigo-400 mb-2">Sectors</h4>
-              <p className="text-gray-300 font-jetbrains font-light">EdTech, Healthcare, Tech & Innovation</p>
+              <h4 className="text-lg font-semibold text-indigo-400 mb-2">Sectors</h4>
+              <p className="text-gray-300">EdTech, Healthcare, Tech & Innovation</p>
             </div>
           </div>
         </div>

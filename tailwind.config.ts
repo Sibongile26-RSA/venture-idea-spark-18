@@ -18,12 +18,6 @@ export default {
 			}
 		},
 		extend: {
-			fontFamily: {
-				'sans': ['JetBrains Mono', 'Space Mono', 'monospace'],
-				'mono': ['JetBrains Mono', 'Space Mono', 'monospace'],
-				'jetbrains': ['JetBrains Mono', 'monospace'],
-				'space': ['Space Mono', 'monospace'],
-			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
