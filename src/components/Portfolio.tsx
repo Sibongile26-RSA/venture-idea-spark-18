@@ -22,6 +22,15 @@ const Portfolio = () => {
       image: "photo-1486312338219-ce68d2c6f44d",
       funding: "$1.5M",
       website: "globallyrecruit.net"
+    },
+    {
+      name: "Catalystia",
+      sector: "Business Development",
+      stage: "Seed",
+      description: "Empowering businesses through strategic frameworks, innovation consulting, and growth acceleration programs.",
+      image: "photo-1461749280684-dccba630e2f6",
+      funding: "$1.2M",
+      website: "catalystia.org"
     }
   ];
 
@@ -37,7 +46,7 @@ const Portfolio = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 justify-center max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center max-w-6xl mx-auto">
           {companies.map((company, index) => (
             <Card key={index} className="group overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border-0">
               <div className="relative h-48 overflow-hidden">
