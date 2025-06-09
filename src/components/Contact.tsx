@@ -3,9 +3,14 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Calculator } from "lucide-react";
+import { useState } from "react";
 
 const Contact = () => {
+  const [mathAnswer, setMathAnswer] = useState("");
+  const mathProblem = "15 + 27 = ?";
+  const correctAnswer = "42";
+
   return (
     <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-6xl mx-auto px-6">
@@ -23,6 +28,29 @@ const Contact = () => {
           <Card className="border-0 shadow-2xl">
             <CardContent className="p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Submit Your Pitch</h3>
+              
+              {/* Math Problem */}
+              <Card className="mb-6 bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200">
+                <CardContent className="p-4">
+                  <div className="flex items-center mb-3">
+                    <Calculator className="w-5 h-5 text-blue-600 mr-2" />
+                    <h4 className="font-semibold text-gray-900">Quick Math Check</h4>
+                  </div>
+                  <p className="text-gray-700 mb-3">Please solve this simple math problem to proceed:</p>
+                  <div className="flex items-center space-x-3">
+                    <span className="font-mono text-lg text-gray-900">{mathProblem}</span>
+                    <Input 
+                      value={mathAnswer}
+                      onChange={(e) => setMathAnswer(e.target.value)}
+                      placeholder="Your answer"
+                      className="w-24 text-center"
+                    />
+                    {mathAnswer === correctAnswer && (
+                      <span className="text-green-600 font-semibold">✓ Correct!</span>
+                    )}
+                  </div>
+                </CardContent>
+              </Card>
               
               <form className="space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -84,10 +112,19 @@ const Contact = () => {
                   />
                 </div>
 
-                <Button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-3 text-lg font-semibold">
+                <Button 
+                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-3 text-lg font-semibold"
+                  disabled={mathAnswer !== correctAnswer}
+                >
                   Submit Pitch
                   <Send className="ml-2 w-5 h-5" />
                 </Button>
+                
+                {mathAnswer !== correctAnswer && (
+                  <p className="text-sm text-orange-600 text-center">
+                    Please solve the math problem above to enable submission
+                  </p>
+                )}
               </form>
             </CardContent>
           </Card>
