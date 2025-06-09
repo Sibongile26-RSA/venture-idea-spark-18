@@ -48,8 +48,8 @@ const Hero = () => {
             <p className="text-gray-300">Portfolio Companies</p>
           </div>
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-            <h3 className="text-3xl font-bold text-indigo-400 mb-2">15+</h3>
-            <p className="text-gray-300">Successful Exits</p>
+            <h3 className="text-3xl font-bold text-indigo-400 mb-2">190+</h3>
+            <p className="text-gray-300">Nations Empowered</p>
           </div>
         </div>
       </div>
