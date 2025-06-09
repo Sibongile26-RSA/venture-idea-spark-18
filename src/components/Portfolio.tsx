@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink } from "lucide-react";
@@ -12,7 +11,7 @@ const Portfolio = () => {
       stage: "Series A",
       description: "Accelerating educational excellence through innovative learning platforms and student development programs.",
       image: "photo-1498050108023-c5249f4df085",
-      valuation: "$2.1M",
+      valuation: "$11.1M",
       website: "4excelerate.org"
     },
     {
@@ -22,7 +21,7 @@ const Portfolio = () => {
       stage: "Seed", 
       description: "Global recruitment platform connecting talented professionals with opportunities worldwide.",
       image: "photo-1486312338219-ce68d2c6f44d",
-      valuation: "$1.5M",
+      valuation: "$10.5M",
       website: "globallyrecruit.net"
     },
     {
@@ -32,7 +31,7 @@ const Portfolio = () => {
       stage: "Seed",
       description: "Empowering businesses through strategic frameworks, innovation consulting, and growth acceleration programs.",
       image: "photo-1461749280684-dccba630e2f6",
-      valuation: "$1.2M",
+      valuation: "$4.2M",
       website: "catalystia.org"
     },
     {
@@ -42,7 +41,7 @@ const Portfolio = () => {
       stage: "Seed",
       description: "Revolutionary e-commerce platform transforming online shopping experiences with AI-driven personalization and seamless marketplace integration.",
       image: "photo-1556742049-0cfed4f6a45d",
-      valuation: "$800K",
+      valuation: "$20M",
       website: "pepagora.com"
     },
     {
@@ -52,7 +51,7 @@ const Portfolio = () => {
       stage: "Pre-Seed",
       description: "Democratizing quality education globally through innovative online learning solutions and accessible skill development programs.",
       image: "photo-1509062522246-3755977927d7",
-      valuation: "$500K",
+      valuation: "$3.5M",
       website: "globalshala.com"
     }
   ];
