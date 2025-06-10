@@ -1,7 +1,6 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ExternalLink, TrendingUp } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 
 const Portfolio = () => {
   const companies = [
@@ -13,8 +12,7 @@ const Portfolio = () => {
       description: "Accelerating educational excellence through innovative learning platforms and student development programs.",
       image: "photo-1498050108023-c5249f4df085",
       valuation: "$11.1M",
-      website: "4excelerate.org",
-      gradient: "from-vempower-primary to-vempower-secondary"
+      website: "4excelerate.org"
     },
     {
       name: "Globally Recruit",
@@ -24,8 +22,7 @@ const Portfolio = () => {
       description: "Global recruitment platform connecting talented professionals with opportunities worldwide.",
       image: "photo-1486312338219-ce68d2c6f44d",
       valuation: "$10.5M",
-      website: "globallyrecruit.net",
-      gradient: "from-vempower-secondary to-vempower-accent"
+      website: "globallyrecruit.net"
     },
     {
       name: "Catalystia",
@@ -35,8 +32,7 @@ const Portfolio = () => {
       description: "Empowering businesses through strategic frameworks, innovation consulting, and growth acceleration programs.",
       image: "photo-1461749280684-dccba630e2f6",
       valuation: "$4.2M",
-      website: "catalystia.org",
-      gradient: "from-vempower-accent to-vempower-primary"
+      website: "catalystia.org"
     },
     {
       name: "Pepagora",
@@ -46,8 +42,7 @@ const Portfolio = () => {
       description: "Revolutionary e-commerce platform transforming online shopping experiences with AI-driven personalization and seamless marketplace integration.",
       image: "photo-1556742049-0cfed4f6a45d",
       valuation: "$20M",
-      website: "pepagora.com",
-      gradient: "from-vempower-primary to-vempower-secondary"
+      website: "pepagora.com"
     },
     {
       name: "Global Shala",
@@ -57,58 +52,57 @@ const Portfolio = () => {
       description: "Democratizing quality education globally through innovative online learning solutions and accessible skill development programs.",
       image: "photo-1509062522246-3755977927d7",
       valuation: "$3.5M",
-      website: "globalshala.com",
-      gradient: "from-vempower-secondary to-vempower-accent"
+      website: "globalshala.com"
     }
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-br from-vempower-dark via-vempower-dark to-vempower-gray">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-20">
-          <h2 className="text-5xl font-display font-bold text-white mb-6">
+    <section className="py-20 bg-gradient-to-b from-white to-gray-50">
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">
             Our Portfolio Success Stories
           </h2>
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Discover the innovative companies we've partnered with and helped scale to new heights
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 justify-center max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center max-w-6xl mx-auto">
           {companies.map((company, index) => (
-            <Card key={index} className="group overflow-hidden hover:shadow-2xl transition-all duration-700 transform hover:-translate-y-4 border-0 bg-white/5 backdrop-blur-lg hover:bg-white/10">
-              <div className="relative h-56 overflow-hidden">
+            <Card key={index} className="group overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border-0">
+              <div className="relative h-48 overflow-hidden">
                 <img 
-                  src={`https://images.unsplash.com/${company.image}?w=500&h=350&fit=crop`}
+                  src={`https://images.unsplash.com/${company.image}?w=400&h=300&fit=crop`}
                   alt={company.name}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className={`absolute inset-0 bg-gradient-to-t ${company.gradient} opacity-60`}></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                 <div className="absolute top-4 right-4">
-                  <Badge className="bg-white/90 text-vempower-dark hover:bg-white font-semibold">
+                  <Badge className="bg-white/90 text-gray-900 hover:bg-white">
                     {company.stage}
                   </Badge>
                 </div>
-                <div className="absolute bottom-6 left-6">
-                  <h3 className="text-white font-display font-bold text-2xl mb-2">{company.name}</h3>
-                  <p className="text-gray-200 text-sm font-medium">{company.country} • {company.sector}</p>
+                <div className="absolute bottom-4 left-4">
+                  <h3 className="text-white font-bold text-xl mb-1">{company.name}</h3>
+                  <p className="text-gray-200 text-sm">{company.country}</p>
+                  <p className="text-gray-200 text-sm">{company.sector}</p>
                 </div>
               </div>
               
-              <CardContent className="p-8">
-                <p className="text-gray-300 mb-6 leading-relaxed">
+              <CardContent className="p-6">
+                <p className="text-gray-600 mb-4 leading-relaxed">
                   {company.description}
                 </p>
                 
                 <div className="flex justify-between items-center">
                   <div className="flex items-center">
-                    <TrendingUp className="w-4 h-4 text-vempower-accent mr-2" />
-                    <span className="text-sm text-gray-400 mr-2">Valuation:</span>
-                    <span className="font-bold text-vempower-accent text-lg">{company.valuation}</span>
+                    <span className="text-sm text-gray-500 mr-2">Valuation:</span>
+                    <span className="font-semibold text-green-600">{company.valuation}</span>
                   </div>
-                  <div className="flex items-center group/link cursor-pointer">
-                    <span className="text-sm text-gray-400 mr-2 group-hover/link:text-vempower-accent transition-colors">{company.website}</span>
-                    <ExternalLink className="w-4 h-4 text-gray-400 group-hover/link:text-vempower-accent transition-colors duration-300" />
+                  <div className="flex items-center">
+                    <span className="text-sm text-gray-500 mr-2">{company.website}</span>
+                    <ExternalLink className="w-5 h-5 text-gray-400 group-hover:text-blue-600 transition-colors duration-300 cursor-pointer" />
                   </div>
                 </div>
               </CardContent>
