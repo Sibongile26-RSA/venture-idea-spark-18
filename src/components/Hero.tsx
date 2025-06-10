@@ -1,70 +1,94 @@
 
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles, Zap } from "lucide-react";
+import { ArrowRight, TrendingUp, Users, Target } from "lucide-react";
+import VEmpowerLogo from "./VEmpowerLogo";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-vempower-dark overflow-hidden">
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-20 left-20 w-96 h-96 bg-vempower-primary rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
-        <div className="absolute top-40 right-20 w-80 h-80 bg-vempower-secondary rounded-full mix-blend-multiply filter blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute bottom-20 left-1/3 w-72 h-72 bg-vempower-accent rounded-full mix-blend-multiply filter blur-3xl animate-pulse delay-500"></div>
-      </div>
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
+      {/* Background Elements */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+      
+      {/* Floating Elements */}
+      <div className="absolute top-20 left-20 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob"></div>
+      <div className="absolute top-40 right-20 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-2000"></div>
+      <div className="absolute -bottom-8 left-40 w-72 h-72 bg-pink-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-4000"></div>
 
-      {/* Grid Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.3) 1px, transparent 0)`,
-          backgroundSize: '50px 50px'
-        }}></div>
-      </div>
-
-      <div className="relative z-10 max-w-7xl mx-auto px-6 text-center text-white">
-        <div className="flex items-center justify-center mb-8 animate-fade-in">
-          <div className="p-4 bg-gradient-to-r from-vempower-primary to-vempower-secondary rounded-2xl mr-6 shadow-2xl">
-            <Sparkles className="w-10 h-10 text-white" />
+      <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
+        {/* Logo and Brand */}
+        <div className="flex items-center justify-center mb-8">
+          <VEmpowerLogo size="xl" className="mr-4" />
+          <div className="text-left">
+            <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-slate-900 via-blue-900 to-indigo-900 bg-clip-text text-transparent">
+              VEmpower
+            </h1>
+            <p className="text-lg text-slate-600 font-medium">Ventures</p>
           </div>
-          <h1 className="text-7xl font-display font-bold bg-gradient-to-r from-white via-vempower-accent to-vempower-secondary bg-clip-text text-transparent">
-            VEmpower
-          </h1>
         </div>
-        
-        <h2 className="text-3xl font-display font-semibold text-vempower-accent mb-6 animate-slide-up">
-          Ventures
+
+        {/* Main Headline */}
+        <h2 className="text-5xl md:text-7xl font-bold text-slate-900 mb-8 leading-tight">
+          Empowering the
+          <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent block">
+            Next Generation
+          </span>
+          of Innovation
         </h2>
-        
-        <p className="text-xl text-gray-300 mb-6 max-w-4xl mx-auto leading-relaxed animate-slide-up">
-          Empowering the next generation of innovative startups through strategic investment and partnership
-        </p>
-        
-        <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto animate-slide-up">
-          We provide capital, mentorship, and resources to transform bold ideas into successful businesses that shape the future
+
+        {/* Subheadline */}
+        <p className="text-xl md:text-2xl text-slate-600 mb-12 max-w-4xl mx-auto leading-relaxed">
+          We partner with visionary entrepreneurs to transform groundbreaking ideas into 
+          market-leading companies through strategic investment and expert guidance.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16 animate-scale-in">
-          <Button size="lg" className="gradient-vempower hover:opacity-90 text-white px-12 py-6 text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-2xl border-0">
+        {/* CTA Buttons */}
+        <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
+          <Button 
+            size="lg" 
+            className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+          >
             Submit Your Pitch
-            <ArrowRight className="ml-3 w-6 h-6" />
+            <ArrowRight className="ml-2 w-5 h-5" />
           </Button>
-          <Button variant="outline" size="lg" className="border-2 border-vempower-accent text-vempower-accent hover:bg-vempower-accent hover:text-vempower-dark px-12 py-6 text-lg transition-all duration-300 backdrop-blur-sm bg-white/5">
-            Learn More
-            <Zap className="ml-3 w-5 h-5" />
+          <Button 
+            variant="outline" 
+            size="lg"
+            className="border-2 border-slate-300 text-slate-700 hover:bg-slate-50 px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300"
+          >
+            View Portfolio
           </Button>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 animate-fade-in">
-          <div className="bg-white/5 backdrop-blur-lg rounded-3xl p-8 border border-white/10 hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-2 shadow-2xl">
-            <h3 className="text-4xl font-bold text-vempower-accent mb-3">$50M+</h3>
-            <p className="text-gray-300 text-lg">Total Valuation</p>
+        {/* Stats */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <div className="flex items-center justify-center mb-4">
+              <div className="p-3 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl">
+                <TrendingUp className="w-6 h-6 text-white" />
+              </div>
+            </div>
+            <div className="text-3xl font-bold text-slate-900 mb-2">$50M+</div>
+            <div className="text-slate-600">Total Investment</div>
           </div>
-          <div className="bg-white/5 backdrop-blur-lg rounded-3xl p-8 border border-white/10 hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-2 shadow-2xl">
-            <h3 className="text-4xl font-bold text-vempower-secondary mb-3">9+</h3>
-            <p className="text-gray-300 text-lg">Portfolio Companies</p>
+          
+          <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <div className="flex items-center justify-center mb-4">
+              <div className="p-3 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl">
+                <Users className="w-6 h-6 text-white" />
+              </div>
+            </div>
+            <div className="text-3xl font-bold text-slate-900 mb-2">25+</div>
+            <div className="text-slate-600">Portfolio Companies</div>
           </div>
-          <div className="bg-white/5 backdrop-blur-lg rounded-3xl p-8 border border-white/10 hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-2 shadow-2xl">
-            <h3 className="text-4xl font-bold text-vempower-primary mb-3">190+</h3>
-            <p className="text-gray-300 text-lg">Nations Empowered</p>
+          
+          <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <div className="flex items-center justify-center mb-4">
+              <div className="p-3 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-xl">
+                <Target className="w-6 h-6 text-white" />
+              </div>
+            </div>
+            <div className="text-3xl font-bold text-slate-900 mb-2">85%</div>
+            <div className="text-slate-600">Success Rate</div>
           </div>
         </div>
       </div>
