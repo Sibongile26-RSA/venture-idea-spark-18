@@ -1,5 +1,5 @@
 
-import { Sparkles, Mail, MapPin, Linkedin, Twitter, ArrowRight } from "lucide-react";
+import { Mail, MapPin, Linkedin, Twitter, ArrowRight } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -21,7 +21,11 @@ const Footer = () => {
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center mb-8">
               <div className="w-14 h-14 gradient-primary rounded-2xl flex items-center justify-center mr-4 shadow-glow animate-pulse-glow">
-                <Sparkles className="w-8 h-8 text-white" />
+                <img 
+                  src="https://vempower.org/wp-content/uploads/2024/10/VEmpower-logo-white.png" 
+                  alt="VEmpower Logo" 
+                  className="w-8 h-8 object-contain"
+                />
               </div>
               <h3 className="text-3xl font-bold text-gradient-primary">
                 VEmpower Ventures
