@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, Send, Users, Zap, TrendingUp } from "lucide-react";
 
@@ -20,7 +19,7 @@ const Process = () => {
       icon: CheckCircle,
       step: "03",
       title: "Due Diligence",
-      description: "Comprehensive analysis of your business model, financials, team, and detailed market opportunity assessment."
+      description: "Comprehensive analysis of your business model, financials, team, and market opportunity."
     },
     {
       icon: Zap,
