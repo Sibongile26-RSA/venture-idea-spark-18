@@ -1,9 +1,8 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, MapPin, Send, Calculator } from "lucide-react";
+import { Mail, MapPin, Send, Calculator } from "lucide-react";
 import { useState } from "react";
 
 const Contact = () => {
@@ -139,21 +138,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900">Email Us</h4>
-                    <p className="text-gray-600">pitch@ventureflow.com</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <CardContent className="p-6">
-                <div className="flex items-center">
-                  <div className="p-3 bg-gradient-to-br from-green-100 to-blue-100 rounded-xl mr-4">
-                    <Phone className="w-6 h-6 text-green-600" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900">Call Us</h4>
-                    <p className="text-gray-600">+1 (555) 123-4567</p>
+                    <p className="text-gray-600">pitch@vempower.org</p>
                   </div>
                 </div>
               </CardContent>
@@ -167,7 +152,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900">Visit Us</h4>
-                    <p className="text-gray-600">123 Innovation Drive, San Francisco, CA 94105</p>
+                    <p className="text-gray-600">The Meydan Grandstand 6th floor, #665<br />Meydan Road, Dubai U.A.E.</p>
                   </div>
                 </div>
               </CardContent>
