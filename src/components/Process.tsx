@@ -20,7 +20,7 @@ const Process = () => {
       icon: CheckCircle,
       step: "03",
       title: "Due Diligence",
-      description: "Detailed analysis of your business model, financials, team, and market opportunity."
+      description: "Comprehensive analysis of your business model, financials, team, and market opportunity."
     },
     {
       icon: Zap,
