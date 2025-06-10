@@ -1,6 +1,6 @@
+
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ChevronDown } from "lucide-react";
-import VEmpowerLogo from "./VEmpowerLogo";
 
 const Hero = () => {
   return (
@@ -30,7 +30,11 @@ const Hero = () => {
         {/* Logo and Brand */}
         <div className="flex items-center justify-center mb-8 animate-fade-in">
           <div className="glass-strong p-4 rounded-2xl mr-6 shadow-glow animate-pulse-glow">
-            <VEmpowerLogo size="md" />
+            <img 
+              src="https://vempower.org/wp-content/uploads/2024/10/VEmpower-logo-white.png" 
+              alt="VEmpower Logo" 
+              className="w-12 h-12 object-contain"
+            />
           </div>
           <h1 className="text-hero text-gradient-primary font-black">
             VEmpower
