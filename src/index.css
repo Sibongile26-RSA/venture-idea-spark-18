@@ -1,105 +1,64 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 0 0% 3%;
-    --foreground: 0 0% 98%;
+    --background: 218 23% 15%;     /* Dark Charcoal (#1F2937) */
+    --foreground: 0 0% 100%;       /* Pure White (#FFFFFF) */
 
-    --card: 0 0% 8%;
-    --card-foreground: 0 0% 95%;
+    --card: 218 23% 12%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 0 0% 6%;
-    --popover-foreground: 0 0% 95%;
+    --popover: 218 23% 10%;
+    --popover-foreground: 0 0% 100%;
 
-    --primary: 257 100% 21%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 180 100% 50%;       /* Bright Cyan (#00FFFF) */
+    --primary-foreground: 218 23% 15%;
 
-    --secondary: 0 0% 12%;
-    --secondary-foreground: 0 0% 90%;
+    --secondary: 318 70% 50%;      /* Vibrant Magenta (#D926A3) */
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 0 0% 10%;
-    --muted-foreground: 0 0% 60%;
+    --muted: 215 24% 80%;          /* Light Cool Gray (#E0E6ED) */
+    --muted-foreground: 215 14% 40%;
 
-    --accent: 195 100% 50%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 76 100% 50%;         /* Lime Green (#A3D900) */
+    --accent-foreground: 0 0% 10%;
 
-    --destructive: 0 84% 60%;
+    --destructive: 0 85% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 15%;
-    --input: 0 0% 15%;
-    --ring: 257 100% 21%;
+    --border: 218 15% 30%;
+    --input: 218 15% 30%;
+    --ring: 180 100% 50%;
 
     --radius: 0.75rem;
 
-    /* Enhanced Dynamic Catalyst Color Palette */
-    --deep-indigo: 257 100% 21%;
-    --vibrant-violet: 287 63% 49%;
-    --bright-orange: 24 100% 50%;
-    --electric-teal: 195 100% 50%;
+    /* Brand extras */
+    --dark-charcoal: 218 23% 15%;
+    --vibrant-magenta: 318 70% 50%;
+    --bright-cyan: 180 100% 50%;
+    --lime-green: 76 100% 50%;
     --pure-white: 0 0% 100%;
-    --charcoal-gray: 0 0% 85%;
-
-    /* Dark variants */
-    --dark-surface: 0 0% 6%;
-    --darker-surface: 0 0% 3%;
-    --glass-bg: 0 0% 8%;
+    --light-cool-gray: 215 24% 80%;
 
     /* Glass effect backgrounds */
     --glass-light: 0 0% 100% / 0.05;
     --glass-medium: 0 0% 100% / 0.08;
     --glass-border: 0 0% 100% / 0.15;
 
-    --sidebar-background: 0 0% 6%;
-    --sidebar-foreground: 0 0% 90%;
-    --sidebar-primary: 257 100% 21%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 0 0% 12%;
-    --sidebar-accent-foreground: 257 100% 21%;
-    --sidebar-border: 0 0% 15%;
-    --sidebar-ring: 195 100% 50%;
+    --sidebar-background: 218 23% 12%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 180 100% 50%;
+    --sidebar-primary-foreground: 218 23% 15%;
+    --sidebar-accent: 318 70% 50%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 218 15% 30%;
+    --sidebar-ring: 180 100% 50%;
   }
 
   .dark {
-    --background: 0 0% 3%;
-    --foreground: 0 0% 98%;
-
-    --card: 0 0% 8%;
-    --card-foreground: 0 0% 95%;
-
-    --popover: 0 0% 6%;
-    --popover-foreground: 0 0% 95%;
-
-    --primary: 195 100% 50%;
-    --primary-foreground: 0 0% 3%;
-
-    --secondary: 287 63% 49%;
-    --secondary-foreground: 0 0% 100%;
-
-    --muted: 0 0% 10%;
-    --muted-foreground: 0 0% 60%;
-
-    --accent: 24 100% 50%;
-    --accent-foreground: 0 0% 100%;
-
-    --destructive: 0 63% 31%;
-    --destructive-foreground: 0 0% 100%;
-
-    --border: 0 0% 15%;
-    --input: 0 0% 15%;
-    --ring: 195 100% 50%;
-
-    --sidebar-background: 0 0% 6%;
-    --sidebar-foreground: 0 0% 90%;
-    --sidebar-primary: 195 100% 50%;
-    --sidebar-primary-foreground: 0 0% 3%;
-    --sidebar-accent: 287 63% 49%;
-    --sidebar-accent-foreground: 0 0% 95%;
-    --sidebar-border: 0 0% 15%;
-    --sidebar-ring: 195 100% 50%;
+    /* Values already dark; no override needed unless you want dynamic switching */
   }
 }
 
@@ -110,7 +69,7 @@
 
   body {
     @apply bg-background text-foreground;
-    background: linear-gradient(135deg, hsl(var(--darker-surface)) 0%, hsl(var(--dark-surface)) 100%);
+    background: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(var(--card)) 100%);
     min-height: 100vh;
   }
 }
@@ -121,22 +80,22 @@
     background: hsl(var(--glass-light));
     border-color: hsl(var(--glass-border));
   }
-  
+
   .glass-card {
     @apply backdrop-blur-xl border shadow-2xl;
     background: hsl(var(--glass-medium));
     border-color: hsl(var(--glass-border));
   }
-  
-  .neon-glow {
-    box-shadow: 0 0 20px hsl(var(--electric-teal) / 0.3), 0 0 40px hsl(var(--electric-teal) / 0.1);
+
+  .cyan-glow {
+    box-shadow: 0 0 20px hsl(var(--bright-cyan) / 0.3), 0 0 40px hsl(var(--bright-cyan) / 0.1);
   }
-  
-  .orange-glow {
-    box-shadow: 0 0 20px hsl(var(--bright-orange) / 0.3), 0 0 40px hsl(var(--bright-orange) / 0.1);
+
+  .magenta-glow {
+    box-shadow: 0 0 20px hsl(var(--vibrant-magenta) / 0.3), 0 0 40px hsl(var(--vibrant-magenta) / 0.1);
   }
-  
-  .violet-glow {
-    box-shadow: 0 0 20px hsl(var(--vibrant-violet) / 0.3), 0 0 40px hsl(var(--vibrant-violet) / 0.1);
+
+  .lime-glow {
+    box-shadow: 0 0 20px hsl(var(--lime-green) / 0.3), 0 0 40px hsl(var(--lime-green) / 0.1);
   }
 }
