@@ -5,39 +5,33 @@
 
 @layer base {
   :root {
+    --background: 0 0% 3%;
+    --foreground: 0 0% 98%;
 
-    /* Backgrounds & Foregrounds */
-    --background: 210 45% 13%;       /* Deep Navy #1A2F4B ≈ hsl(210, 45%, 13%) */
-    --foreground: 210 20% 92%;       /* Off-white text, lighter than #F8F8F8 for contrast */
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 95%;
 
+    --popover: 0 0% 6%;
+    --popover-foreground: 0 0% 95%;
 
-    --card: 176 100% 17%;             /* Rich Teal #008C8C ≈ hsl(176, 100%, 17%) */
-    --card-foreground: 210 20% 92%;  /* Light text on cards */
+    --primary: 257 100% 21%;
+    --primary-foreground: 0 0% 100%;
 
-    --popover: 210 40% 18%;          /* Slightly lighter deep navy */
-    --popover-foreground: 210 20% 92%;
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 90%;
 
-    /* Primary & Secondary */
-    --primary: 210 45% 13%;          /* Deep Navy */
-    --primary-foreground: 210 20% 92%;
+    --muted: 0 0% 10%;
+    --muted-foreground: 0 0% 60%;
 
-    --secondary: 176 100% 17%;       /* Rich Teal */
-    --secondary-foreground: 210 20% 92%;
+    --accent: 195 100% 50%;
+    --accent-foreground: 0 0% 100%;
 
-    /* Accent colors */
-    --accent: 45 100% 52%;           /* Vibrant Gold #FFC107 ≈ hsl(45, 100%, 52%) */
-    --accent-foreground: 210 20% 13%; /* Dark text for contrast */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --destructive: 29 90% 47%;       /* Terracotta Orange #E67300 ≈ hsl(29, 90%, 47%) */
-    --destructive-foreground: 210 20% 92%;
-
-    /* Muted and borders */
-    --muted: 210 35% 28%;            /* Muted darker teal */
-    --muted-foreground: 210 20% 65%;
-    --border: 210 45% 17%;
-    --input: 210 45% 17%;
-    --ring: 176 100% 17%;
-
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 257 100% 21%;
 
     --radius: 0.75rem;
 
@@ -70,62 +64,27 @@
   }
 
   .dark {
-<<<<<<< HEAD
-    --background: 210 45% 10%;       /* Even darker deep navy for dark mode */
-    --foreground: 210 20% 95%;
-=======
     --background: 0 0% 3%;
     --foreground: 0 0% 98%;
->>>>>>> d8285d98d7e0153746a6cbab835ead40b0da3f75
 
-<<<<<<< HEAD
-    --card: 176 100% 14%;
-    --card-foreground: 210 20% 95%;
-=======
     --card: 0 0% 8%;
     --card-foreground: 0 0% 95%;
->>>>>>> d8285d98d7e0153746a6cbab835ead40b0da3f75
 
     --popover: 0 0% 6%;
     --popover-foreground: 0 0% 95%;
 
-<<<<<<< HEAD
-    --primary: 176 100% 17%;          /* Rich Teal primary in dark */
-    --primary-foreground: 210 20% 13%;
-=======
     --primary: 195 100% 50%;
     --primary-foreground: 0 0% 3%;
->>>>>>> d8285d98d7e0153746a6cbab835ead40b0da3f75
 
-<<<<<<< HEAD
-    --secondary: 45 100% 52%;         /* Vibrant Gold as secondary */
-    --secondary-foreground: 210 20% 13%;
-=======
     --secondary: 287 63% 49%;
     --secondary-foreground: 0 0% 100%;
->>>>>>> d8285d98d7e0153746a6cbab835ead40b0da3f75
 
-<<<<<<< HEAD
-    --accent: 29 90% 47%;             /* Terracotta accent */
-    --accent-foreground: 210 20% 95%;
-=======
     --muted: 0 0% 10%;
     --muted-foreground: 0 0% 60%;
->>>>>>> d8285d98d7e0153746a6cbab835ead40b0da3f75
 
-<<<<<<< HEAD
-    --destructive: 10 90% 40%;        /* Darker destructive red-orange */
-    --destructive-foreground: 210 20% 95%;
-=======
     --accent: 24 100% 50%;
     --accent-foreground: 0 0% 100%;
->>>>>>> d8285d98d7e0153746a6cbab835ead40b0da3f75
 
-<<<<<<< HEAD
-    --border: 210 45% 13%;
-    --input: 210 45% 13%;
-    --ring: 176 100% 17%;
-=======
     --destructive: 0 63% 31%;
     --destructive-foreground: 0 0% 100%;
 
@@ -141,7 +100,6 @@
     --sidebar-accent-foreground: 0 0% 95%;
     --sidebar-border: 0 0% 15%;
     --sidebar-ring: 195 100% 50%;
->>>>>>> d8285d98d7e0153746a6cbab835ead40b0da3f75
   }
 }
 
