@@ -5,23 +5,23 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 20%;
+    --background: 0 0% 3%;
+    --foreground: 0 0% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 20%;
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 20%;
+    --popover: 0 0% 6%;
+    --popover-foreground: 0 0% 95%;
 
     --primary: 257 100% 21%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 96%;
-    --secondary-foreground: 0 0% 20%;
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 90%;
 
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 45%;
+    --muted: 0 0% 10%;
+    --muted-foreground: 0 0% 60%;
 
     --accent: 195 100% 50%;
     --accent-foreground: 0 0% 100%;
@@ -29,66 +29,71 @@
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 91%;
-    --input: 0 0% 91%;
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
     --ring: 257 100% 21%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    /* Dynamic Catalyst Color Palette */
+    /* Enhanced Dynamic Catalyst Color Palette */
     --deep-indigo: 257 100% 21%;
     --vibrant-violet: 287 63% 49%;
     --bright-orange: 24 100% 50%;
     --electric-teal: 195 100% 50%;
     --pure-white: 0 0% 100%;
-    --charcoal-gray: 0 0% 20%;
+    --charcoal-gray: 0 0% 85%;
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 0 0% 20%;
+    /* Dark variants */
+    --dark-surface: 0 0% 6%;
+    --darker-surface: 0 0% 3%;
+    --glass-bg: 0 0% 8%;
+
+    --sidebar-background: 0 0% 6%;
+    --sidebar-foreground: 0 0% 90%;
     --sidebar-primary: 257 100% 21%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 0 0% 96%;
+    --sidebar-accent: 0 0% 12%;
     --sidebar-accent-foreground: 257 100% 21%;
-    --sidebar-border: 0 0% 91%;
+    --sidebar-border: 0 0% 15%;
     --sidebar-ring: 195 100% 50%;
   }
 
   .dark {
-    --background: 257 100% 21%;
-    --foreground: 0 0% 100%;
+    --background: 0 0% 3%;
+    --foreground: 0 0% 98%;
 
-    --card: 257 100% 21%;
-    --card-foreground: 0 0% 100%;
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 257 100% 21%;
-    --popover-foreground: 0 0% 100%;
+    --popover: 0 0% 6%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 0 0% 100%;
-    --primary-foreground: 257 100% 21%;
+    --primary: 195 100% 50%;
+    --primary-foreground: 0 0% 3%;
 
     --secondary: 287 63% 49%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 287 63% 49%;
-    --muted-foreground: 0 0% 65%;
+    --muted: 0 0% 10%;
+    --muted-foreground: 0 0% 60%;
 
-    --accent: 195 100% 50%;
+    --accent: 24 100% 50%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 63% 31%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 287 63% 49%;
-    --input: 287 63% 49%;
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
     --ring: 195 100% 50%;
 
-    --sidebar-background: 257 100% 21%;
-    --sidebar-foreground: 0 0% 95%;
+    --sidebar-background: 0 0% 6%;
+    --sidebar-foreground: 0 0% 90%;
     --sidebar-primary: 195 100% 50%;
-    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-primary-foreground: 0 0% 3%;
     --sidebar-accent: 287 63% 49%;
     --sidebar-accent-foreground: 0 0% 95%;
-    --sidebar-border: 287 63% 49%;
+    --sidebar-border: 0 0% 15%;
     --sidebar-ring: 195 100% 50%;
   }
 }
@@ -100,5 +105,29 @@
 
   body {
     @apply bg-background text-foreground;
+    background: linear-gradient(135deg, hsl(var(--darker-surface)) 0%, hsl(var(--dark-surface)) 100%);
+    min-height: 100vh;
+  }
+}
+
+@layer utilities {
+  .glass-effect {
+    @apply backdrop-blur-xl bg-white/5 border border-white/10;
+  }
+  
+  .glass-card {
+    @apply backdrop-blur-xl bg-white/8 border border-white/15 shadow-2xl;
+  }
+  
+  .neon-glow {
+    box-shadow: 0 0 20px hsl(var(--electric-teal) / 0.3), 0 0 40px hsl(var(--electric-teal) / 0.1);
+  }
+  
+  .orange-glow {
+    box-shadow: 0 0 20px hsl(var(--bright-orange) / 0.3), 0 0 40px hsl(var(--bright-orange) / 0.1);
+  }
+  
+  .violet-glow {
+    box-shadow: 0 0 20px hsl(var(--vibrant-violet) / 0.3), 0 0 40px hsl(var(--vibrant-violet) / 0.1);
   }
 }

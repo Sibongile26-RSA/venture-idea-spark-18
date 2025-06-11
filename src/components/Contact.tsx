@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, MapPin, Send, Calculator } from "lucide-react";
+import { Mail, MapPin, Send, Calculator, Sparkles } from "lucide-react";
 import { useState } from "react";
 
 const Contact = () => {
@@ -12,41 +12,49 @@ const Contact = () => {
   const correctAnswer = "42";
 
   return (
-    <section className="py-20 bg-gradient-to-b from-gray-50 to-pure-white">
+    <section className="py-24 bg-gradient-to-b from-dark-surface to-darker-surface">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-charcoal-gray mb-4">
+        <div className="text-center mb-20">
+          <h2 className="text-5xl font-bold text-charcoal-gray mb-6 bg-gradient-to-r from-bright-orange to-electric-teal bg-clip-text text-transparent">
             Ready to Pitch Your Idea?
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-charcoal-gray/80 max-w-3xl mx-auto leading-relaxed">
             Let's discuss how we can help transform your vision into a successful business
           </p>
+          <div className="flex items-center justify-center gap-2 mt-4">
+            <Sparkles className="w-5 h-5 text-electric-teal animate-pulse" />
+            <span className="text-electric-teal font-medium">Your innovation journey starts here</span>
+            <Sparkles className="w-5 h-5 text-bright-orange animate-pulse delay-500" />
+          </div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Contact Form */}
-          <Card className="border-0 shadow-2xl">
-            <CardContent className="p-8">
-              <h3 className="text-2xl font-bold text-charcoal-gray mb-6">Submit Your Pitch</h3>
+          {/* Enhanced Contact Form */}
+          <Card className="glass-card border-electric-teal/20 hover:border-electric-teal/40 transition-all duration-500">
+            <CardContent className="p-10">
+              <h3 className="text-3xl font-bold text-charcoal-gray mb-8 bg-gradient-to-r from-electric-teal to-vibrant-violet bg-clip-text text-transparent">Submit Your Pitch</h3>
               
-              {/* Math Problem */}
-              <Card className="mb-6 bg-gradient-to-r from-electric-teal/10 to-vibrant-violet/10 border border-electric-teal/30">
-                <CardContent className="p-4">
-                  <div className="flex items-center mb-3">
-                    <Calculator className="w-5 h-5 text-deep-indigo mr-2" />
-                    <h4 className="font-semibold text-charcoal-gray">Quick Math Check</h4>
+              {/* Enhanced Math Problem */}
+              <Card className="mb-8 glass-effect border border-electric-teal/30 hover:border-electric-teal/50 transition-all duration-300">
+                <CardContent className="p-6">
+                  <div className="flex items-center mb-4">
+                    <Calculator className="w-6 h-6 text-electric-teal mr-3" />
+                    <h4 className="font-semibold text-charcoal-gray text-lg">Quick Math Check</h4>
                   </div>
-                  <p className="text-gray-700 mb-3">Please solve this simple math problem to proceed:</p>
-                  <div className="flex items-center space-x-3">
-                    <span className="font-mono text-lg text-charcoal-gray">{mathProblem}</span>
+                  <p className="text-charcoal-gray/80 mb-4">Please solve this simple math problem to proceed:</p>
+                  <div className="flex items-center space-x-4">
+                    <span className="font-mono text-xl text-charcoal-gray bg-glass-bg px-4 py-2 rounded-lg">{mathProblem}</span>
                     <Input 
                       value={mathAnswer}
                       onChange={(e) => setMathAnswer(e.target.value)}
                       placeholder="Your answer"
-                      className="w-24 text-center border-electric-teal/50 focus:border-electric-teal"
+                      className="w-32 text-center border-electric-teal/50 focus:border-electric-teal bg-glass-bg text-charcoal-gray"
                     />
                     {mathAnswer === correctAnswer && (
-                      <span className="text-bright-orange font-semibold">✓ Correct!</span>
+                      <span className="text-bright-orange font-semibold flex items-center gap-2">
+                        <Sparkles className="w-4 h-4" />
+                        Correct!
+                      </span>
                     )}
                   </div>
                 </CardContent>
@@ -55,38 +63,38 @@ const Contact = () => {
               <form className="space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-medium text-charcoal-gray mb-2">
+                    <label className="block text-sm font-medium text-charcoal-gray mb-3">
                       First Name
                     </label>
-                    <Input placeholder="John" className="border-gray-300 focus:border-electric-teal" />
+                    <Input placeholder="John" className="border-electric-teal/30 focus:border-electric-teal bg-glass-bg text-charcoal-gray" />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-charcoal-gray mb-2">
+                    <label className="block text-sm font-medium text-charcoal-gray mb-3">
                       Last Name
                     </label>
-                    <Input placeholder="Doe" className="border-gray-300 focus:border-electric-teal" />
+                    <Input placeholder="Doe" className="border-electric-teal/30 focus:border-electric-teal bg-glass-bg text-charcoal-gray" />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-charcoal-gray mb-2">
+                  <label className="block text-sm font-medium text-charcoal-gray mb-3">
                     Email Address
                   </label>
-                  <Input type="email" placeholder="john@startup.com" className="border-gray-300 focus:border-electric-teal" />
+                  <Input type="email" placeholder="john@startup.com" className="border-electric-teal/30 focus:border-electric-teal bg-glass-bg text-charcoal-gray" />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-charcoal-gray mb-2">
+                  <label className="block text-sm font-medium text-charcoal-gray mb-3">
                     Company Name
                   </label>
-                  <Input placeholder="Your Startup" className="border-gray-300 focus:border-electric-teal" />
+                  <Input placeholder="Your Startup" className="border-electric-teal/30 focus:border-electric-teal bg-glass-bg text-charcoal-gray" />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-charcoal-gray mb-2">
+                  <label className="block text-sm font-medium text-charcoal-gray mb-3">
                     Funding Stage
                   </label>
-                  <select className="w-full p-3 border border-gray-300 rounded-md focus:border-electric-teal focus:outline-none focus:ring-2 focus:ring-electric-teal/20">
+                  <select className="w-full p-4 border border-electric-teal/30 rounded-lg focus:border-electric-teal focus:outline-none focus:ring-2 focus:ring-electric-teal/20 bg-glass-bg text-charcoal-gray">
                     <option>Pre-Seed</option>
                     <option>Seed</option>
                     <option>Series A</option>
@@ -95,33 +103,34 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-charcoal-gray mb-2">
+                  <label className="block text-sm font-medium text-charcoal-gray mb-3">
                     Funding Amount Sought
                   </label>
-                  <Input placeholder="$500,000" className="border-gray-300 focus:border-electric-teal" />
+                  <Input placeholder="$500,000" className="border-electric-teal/30 focus:border-electric-teal bg-glass-bg text-charcoal-gray" />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-charcoal-gray mb-2">
+                  <label className="block text-sm font-medium text-charcoal-gray mb-3">
                     Pitch Summary
                   </label>
                   <Textarea 
                     placeholder="Describe your business idea, market opportunity, and what makes your startup unique..."
                     rows={5}
-                    className="border-gray-300 focus:border-electric-teal"
+                    className="border-electric-teal/30 focus:border-electric-teal bg-glass-bg text-charcoal-gray"
                   />
                 </div>
 
                 <Button 
-                  className="w-full bg-gradient-to-r from-bright-orange to-vibrant-violet hover:from-bright-orange/90 hover:to-vibrant-violet/90 text-pure-white py-3 text-lg font-semibold"
+                  className="w-full bg-gradient-to-r from-bright-orange to-vibrant-violet hover:from-bright-orange/90 hover:to-vibrant-violet/90 text-pure-white py-4 text-lg font-semibold shadow-2xl orange-glow hover:scale-105 transition-all duration-300"
                   disabled={mathAnswer !== correctAnswer}
                 >
                   Submit Pitch
-                  <Send className="ml-2 w-5 h-5" />
+                  <Send className="ml-3 w-5 h-5" />
                 </Button>
                 
                 {mathAnswer !== correctAnswer && (
-                  <p className="text-sm text-bright-orange text-center">
+                  <p className="text-sm text-bright-orange text-center flex items-center justify-center gap-2">
+                    <Calculator className="w-4 h-4" />
                     Please solve the math problem above to enable submission
                   </p>
                 )}
@@ -129,53 +138,53 @@ const Contact = () => {
             </CardContent>
           </Card>
 
-          {/* Contact Information */}
+          {/* Enhanced Contact Information */}
           <div className="space-y-8">
-            <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <CardContent className="p-6">
+            <Card className="glass-card border-electric-teal/20 hover:border-electric-teal/40 hover:scale-105 transition-all duration-500">
+              <CardContent className="p-8">
                 <div className="flex items-center">
-                  <div className="p-3 bg-gradient-to-br from-electric-teal/10 to-vibrant-violet/10 rounded-xl mr-4">
-                    <Mail className="w-6 h-6 text-deep-indigo" />
+                  <div className="p-4 bg-gradient-to-br from-electric-teal/20 to-vibrant-violet/20 rounded-2xl mr-6">
+                    <Mail className="w-8 h-8 text-electric-teal" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-charcoal-gray">Email Us</h4>
-                    <p className="text-gray-600">pitch@vempower.org</p>
+                    <h4 className="font-semibold text-charcoal-gray text-lg mb-2">Email Us</h4>
+                    <p className="text-charcoal-gray/80 text-lg">pitch@vempower.org</p>
                   </div>
                 </div>
               </CardContent>
             </Card>
 
-            <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <CardContent className="p-6">
+            <Card className="glass-card border-bright-orange/20 hover:border-bright-orange/40 hover:scale-105 transition-all duration-500">
+              <CardContent className="p-8">
                 <div className="flex items-center">
-                  <div className="p-3 bg-gradient-to-br from-vibrant-violet/10 to-bright-orange/10 rounded-xl mr-4">
-                    <MapPin className="w-6 h-6 text-vibrant-violet" />
+                  <div className="p-4 bg-gradient-to-br from-bright-orange/20 to-vibrant-violet/20 rounded-2xl mr-6">
+                    <MapPin className="w-8 h-8 text-bright-orange" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-charcoal-gray">Visit Us</h4>
-                    <p className="text-gray-600">The Meydan Grandstand 6th floor, #665<br />Meydan Road, Dubai U.A.E.</p>
+                    <h4 className="font-semibold text-charcoal-gray text-lg mb-2">Visit Us</h4>
+                    <p className="text-charcoal-gray/80">The Meydan Grandstand 6th floor, #665<br />Meydan Road, Dubai U.A.E.</p>
                   </div>
                 </div>
               </CardContent>
             </Card>
 
-            <div className="bg-gradient-to-br from-electric-teal/5 to-vibrant-violet/5 rounded-2xl p-8 border border-electric-teal/20">
-              <h4 className="text-xl font-bold text-charcoal-gray mb-4">Why Choose VEmpower?</h4>
-              <ul className="space-y-3 text-gray-600">
+            <div className="glass-card rounded-3xl p-8 border border-vibrant-violet/20 hover:border-vibrant-violet/40 transition-all duration-500">
+              <h4 className="text-2xl font-bold text-charcoal-gray mb-6 bg-gradient-to-r from-vibrant-violet to-electric-teal bg-clip-text text-transparent">Why Choose VEmpower?</h4>
+              <ul className="space-y-4 text-charcoal-gray/80">
                 <li className="flex items-center">
-                  <div className="w-2 h-2 bg-electric-teal rounded-full mr-3"></div>
+                  <div className="w-3 h-3 bg-electric-teal rounded-full mr-4 animate-pulse"></div>
                   Fast decision-making process (30 days or less)
                 </li>
                 <li className="flex items-center">
-                  <div className="w-2 h-2 bg-vibrant-violet rounded-full mr-3"></div>
+                  <div className="w-3 h-3 bg-vibrant-violet rounded-full mr-4 animate-pulse delay-200"></div>
                   Hands-on mentorship from industry experts
                 </li>
                 <li className="flex items-center">
-                  <div className="w-2 h-2 bg-bright-orange rounded-full mr-3"></div>
+                  <div className="w-3 h-3 bg-bright-orange rounded-full mr-4 animate-pulse delay-400"></div>
                   Access to our extensive network of partners
                 </li>
                 <li className="flex items-center">
-                  <div className="w-2 h-2 bg-deep-indigo rounded-full mr-3"></div>
+                  <div className="w-3 h-3 bg-electric-teal rounded-full mr-4 animate-pulse delay-600"></div>
                   Ongoing support throughout your growth journey
                 </li>
               </ul>
