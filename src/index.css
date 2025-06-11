@@ -4,61 +4,51 @@
 
 @layer base {
   :root {
-    --background: 218 23% 15%;     /* Dark Charcoal (#1F2937) */
-    --foreground: 0 0% 100%;       /* Pure White (#FFFFFF) */
+    /* Core Background + Foreground */
+    --background: 217 25% 15%;       /* Dark Charcoal (#1F2937) */
+    --foreground: 0 0% 100%;         /* Pure White */
 
-    --card: 218 23% 12%;
+    --card: 217 23% 12%;
     --card-foreground: 0 0% 100%;
 
-    --popover: 218 23% 10%;
+    --popover: 217 23% 10%;
     --popover-foreground: 0 0% 100%;
 
-    --primary: 180 100% 50%;       /* Bright Cyan (#00FFFF) */
-    --primary-foreground: 218 23% 15%;
+    /* Vibrant Neon Accents */
+    --primary: 180 100% 60%;         /* Bright Cyan */
+    --primary-foreground: 217 25% 15%;
 
-    --secondary: 318 70% 50%;      /* Vibrant Magenta (#D926A3) */
+    --secondary: 318 80% 55%;        /* Vibrant Magenta */
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 215 24% 80%;          /* Light Cool Gray (#E0E6ED) */
-    --muted-foreground: 215 14% 40%;
-
-    --accent: 76 100% 50%;         /* Lime Green (#A3D900) */
+    --accent: 76 100% 60%;           /* Lime Green */
     --accent-foreground: 0 0% 10%;
 
-    --destructive: 0 85% 50%;
+    --destructive: 0 85% 58%;        /* Vivid Red */
     --destructive-foreground: 0 0% 100%;
 
-    --border: 218 15% 30%;
-    --input: 218 15% 30%;
-    --ring: 180 100% 50%;
+    /* Neutrals + Glass */
+    --muted: 215 24% 80%;            /* Light Cool Gray */
+    --muted-foreground: 215 14% 35%;
 
-    --radius: 0.75rem;
+    --border: 217 15% 30%;
+    --input: 217 15% 30%;
+    --ring: 180 100% 60%;
 
-    /* Brand extras */
-    --dark-charcoal: 218 23% 15%;
-    --vibrant-magenta: 318 70% 50%;
-    --bright-cyan: 180 100% 50%;
-    --lime-green: 76 100% 50%;
-    --pure-white: 0 0% 100%;
-    --light-cool-gray: 215 24% 80%;
+    --radius: 1rem;
 
-    /* Glass effect backgrounds */
+    /* Extra Tokens for Effects */
     --glass-light: 0 0% 100% / 0.05;
     --glass-medium: 0 0% 100% / 0.08;
     --glass-border: 0 0% 100% / 0.15;
 
-    --sidebar-background: 218 23% 12%;
-    --sidebar-foreground: 0 0% 95%;
-    --sidebar-primary: 180 100% 50%;
-    --sidebar-primary-foreground: 218 23% 15%;
-    --sidebar-accent: 318 70% 50%;
-    --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 218 15% 30%;
-    --sidebar-ring: 180 100% 50%;
+    --neon-magenta: 318 80% 55%;
+    --neon-cyan: 180 100% 60%;
+    --neon-lime: 76 100% 60%;
   }
 
   .dark {
-    /* Values already dark; no override needed unless you want dynamic switching */
+    /* Keep same values for a permanently dark theme */
   }
 }
 
@@ -69,33 +59,68 @@
 
   body {
     @apply bg-background text-foreground;
-    background: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(var(--card)) 100%);
+    background: radial-gradient(
+      circle at top left,
+      hsl(var(--background)),
+      hsl(var(--card))
+    );
     min-height: 100vh;
   }
 }
 
 @layer utilities {
   .glass-effect {
-    @apply backdrop-blur-xl border;
+    @apply backdrop-blur-xl border rounded-xl shadow-lg;
     background: hsl(var(--glass-light));
     border-color: hsl(var(--glass-border));
   }
 
   .glass-card {
-    @apply backdrop-blur-xl border shadow-2xl;
+    @apply backdrop-blur-2xl border shadow-2xl p-6 rounded-2xl;
     background: hsl(var(--glass-medium));
     border-color: hsl(var(--glass-border));
   }
 
-  .cyan-glow {
-    box-shadow: 0 0 20px hsl(var(--bright-cyan) / 0.3), 0 0 40px hsl(var(--bright-cyan) / 0.1);
+  .neon-border {
+    border-image: linear-gradient(
+      90deg,
+      hsl(var(--neon-magenta)),
+      hsl(var(--neon-cyan)),
+      hsl(var(--neon-lime))
+    ) 1;
+    border-width: 2px;
+    border-style: solid;
   }
 
-  .magenta-glow {
-    box-shadow: 0 0 20px hsl(var(--vibrant-magenta) / 0.3), 0 0 40px hsl(var(--vibrant-magenta) / 0.1);
+  .neon-text {
+    background: linear-gradient(90deg,
+      hsl(var(--neon-magenta)),
+      hsl(var(--neon-cyan)),
+      hsl(var(--neon-lime))
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
-  .lime-glow {
-    box-shadow: 0 0 20px hsl(var(--lime-green) / 0.3), 0 0 40px hsl(var(--lime-green) / 0.1);
+  .glow-cyan {
+    box-shadow: 0 0 12px hsl(var(--neon-cyan) / 0.6), 0 0 30px hsl(var(--neon-cyan) / 0.4);
+  }
+
+  .glow-magenta {
+    box-shadow: 0 0 12px hsl(var(--neon-magenta) / 0.6), 0 0 30px hsl(var(--neon-magenta) / 0.4);
+  }
+
+  .glow-lime {
+    box-shadow: 0 0 12px hsl(var(--neon-lime) / 0.6), 0 0 30px hsl(var(--neon-lime) / 0.4);
+  }
+
+  .flicker {
+    animation: flicker 1.5s infinite alternate;
+  }
+
+  @keyframes flicker {
+    0% { opacity: 1; text-shadow: 0 0 10px hsl(var(--neon-cyan)); }
+    50% { opacity: 0.8; text-shadow: 0 0 15px hsl(var(--neon-magenta)); }
+    100% { opacity: 1; text-shadow: 0 0 20px hsl(var(--neon-lime)); }
   }
 }
