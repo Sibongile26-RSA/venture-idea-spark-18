@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,14 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Dynamic Catalyst Color Palette
+				'deep-indigo': 'hsl(var(--deep-indigo))',
+				'vibrant-violet': 'hsl(var(--vibrant-violet))',
+				'bright-orange': 'hsl(var(--bright-orange))',
+				'electric-teal': 'hsl(var(--electric-teal))',
+				'pure-white': 'hsl(var(--pure-white))',
+				'charcoal-gray': 'hsl(var(--charcoal-gray))'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

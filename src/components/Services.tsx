@@ -37,10 +37,10 @@ const Services = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
+    <section className="py-20 bg-gradient-to-b from-gray-50 to-pure-white">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl font-bold text-charcoal-gray mb-4">
             How We Accelerate Your Success
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -50,14 +50,14 @@ const Services = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-0 bg-white hover:bg-gradient-to-br hover:from-blue-50 hover:to-purple-50">
+            <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-0 bg-pure-white hover:bg-gradient-to-br hover:from-electric-teal/5 hover:to-vibrant-violet/5">
               <CardContent className="p-8">
                 <div className="flex items-center mb-4">
-                  <div className="p-3 bg-gradient-to-br from-blue-100 to-purple-100 rounded-xl group-hover:from-blue-200 group-hover:to-purple-200 transition-all duration-300">
-                    <service.icon className="w-8 h-8 text-blue-600 group-hover:text-purple-600 transition-colors duration-300" />
+                  <div className="p-3 bg-gradient-to-br from-electric-teal/10 to-vibrant-violet/10 rounded-xl group-hover:from-electric-teal/20 group-hover:to-vibrant-violet/20 transition-all duration-300">
+                    <service.icon className="w-8 h-8 text-deep-indigo group-hover:text-vibrant-violet transition-colors duration-300" />
                   </div>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-blue-900 transition-colors duration-300">
+                <h3 className="text-xl font-semibold text-charcoal-gray mb-3 group-hover:text-deep-indigo transition-colors duration-300">
                   {service.title}
                 </h3>
                 <p className="text-gray-600 leading-relaxed">

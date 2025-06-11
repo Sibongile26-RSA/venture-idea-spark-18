@@ -4,7 +4,7 @@ import VEmpowerLogo from "./VEmpowerLogo";
 
 const Footer = () => {
   return (
-    <footer className="bg-slate-900 text-white py-16">
+    <footer className="bg-deep-indigo text-pure-white py-16">
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
@@ -19,10 +19,10 @@ const Footer = () => {
               businesses that shape the future.
             </p>
             <div className="flex space-x-4">
-              <div className="p-2 bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors cursor-pointer">
+              <div className="p-2 bg-electric-teal rounded-lg hover:bg-electric-teal/80 transition-colors cursor-pointer">
                 <Linkedin className="w-5 h-5" />
               </div>
-              <div className="p-2 bg-blue-400 rounded-lg hover:bg-blue-500 transition-colors cursor-pointer">
+              <div className="p-2 bg-bright-orange rounded-lg hover:bg-bright-orange/80 transition-colors cursor-pointer">
                 <Twitter className="w-5 h-5" />
               </div>
             </div>
@@ -32,11 +32,11 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-3 text-gray-300">
-              <li><a href="#" className="hover:text-blue-400 transition-colors">About Us</a></li>
-              <li><a href="#" className="hover:text-blue-400 transition-colors">Our Portfolio</a></li>
-              <li><a href="#" className="hover:text-blue-400 transition-colors">Investment Process</a></li>
-              <li><a href="#" className="hover:text-blue-400 transition-colors">Success Stories</a></li>
-              <li><a href="#" className="hover:text-blue-400 transition-colors">Resources</a></li>
+              <li><a href="#" className="hover:text-electric-teal transition-colors">About Us</a></li>
+              <li><a href="#" className="hover:text-electric-teal transition-colors">Our Portfolio</a></li>
+              <li><a href="#" className="hover:text-electric-teal transition-colors">Investment Process</a></li>
+              <li><a href="#" className="hover:text-electric-teal transition-colors">Success Stories</a></li>
+              <li><a href="#" className="hover:text-electric-teal transition-colors">Resources</a></li>
             </ul>
           </div>
 
@@ -45,11 +45,11 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Contact</h4>
             <div className="space-y-3 text-gray-300">
               <div className="flex items-center">
-                <Mail className="w-4 h-4 mr-3 text-blue-400" />
+                <Mail className="w-4 h-4 mr-3 text-electric-teal" />
                 <span className="text-sm">pitch@vempower.org</span>
               </div>
               <div className="flex items-start">
-                <MapPin className="w-4 h-4 mr-3 text-blue-400 mt-1" />
+                <MapPin className="w-4 h-4 mr-3 text-electric-teal mt-1" />
                 <span className="text-sm">The Meydan Grandstand 6th floor, #665<br />Meydan Road, Dubai U.A.E.</span>
               </div>
             </div>
@@ -63,9 +63,9 @@ const Footer = () => {
             © 2024 VEmpower Ventures. All rights reserved.
           </div>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="text-gray-400 hover:text-blue-400 text-sm transition-colors">Privacy Policy</a>
-            <a href="#" className="text-gray-400 hover:text-blue-400 text-sm transition-colors">Terms of Service</a>
-            <a href="#" className="text-gray-400 hover:text-blue-400 text-sm transition-colors">Cookie Policy</a>
+            <a href="#" className="text-gray-400 hover:text-electric-teal text-sm transition-colors">Privacy Policy</a>
+            <a href="#" className="text-gray-400 hover:text-electric-teal text-sm transition-colors">Terms of Service</a>
+            <a href="#" className="text-gray-400 hover:text-electric-teal text-sm transition-colors">Cookie Policy</a>
           </div>
         </div>
       </div>
