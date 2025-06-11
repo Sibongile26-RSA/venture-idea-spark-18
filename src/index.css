@@ -2,73 +2,68 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Base Layer with Theme Variables */
 @layer base {
   :root {
-    /* Neutrals */
-    --background: 220 26% 95%; /* Off-white */
-    --foreground: 220 20% 10%;
+    /* Backgrounds & Foregrounds */
+    --background: 210 40% 15%;       /* Deep Navy background (darker) */
+    --foreground: 210 20% 90%;       /* Light text on dark bg */
 
-    --card: 220 26% 98%;
-    --card-foreground: 220 20% 10%;
+    --card: 180 70% 25%;             /* Rich Teal for cards */
+    --card-foreground: 210 20% 95%;  /* Light text on cards */
 
-    --popover: 220 26% 98%;
-    --popover-foreground: 220 20% 10%;
+    --popover: 210 40% 18%;          /* Slightly lighter deep navy */
+    --popover-foreground: 210 20% 90%;
 
-    --primary: 204 47% 20%; /* Deep Navy */
-    --primary-foreground: 0 0% 100%;
+    /* Primary & Secondary */
+    --primary: 210 40% 15%;          /* Deep Navy */
+    --primary-foreground: 210 20% 95%; 
 
-    --secondary: 180 100% 28%; /* Rich Teal */
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 180 80% 30%;        /* Rich Teal */
+    --secondary-foreground: 210 20% 98%;
 
-    --accent: 42 100% 50%; /* Vibrant Gold */
-    --accent-foreground: 220 20% 10%;
+    /* Accent colors */
+    --accent: 45 100% 50%;           /* Vibrant Gold */
+    --accent-foreground: 210 20% 15%; 
 
-    --destructive: 19 80% 45%; /* Terracotta Orange */
-    --destructive-foreground: 0 0% 100%;
+    --destructive: 28 90% 45%;       /* Terracotta Orange */
+    --destructive-foreground: 210 20% 95%;
 
-    --muted: 220 14% 85%;
-    --muted-foreground: 220 14% 30%;
+    /* Muted and borders */
+    --muted: 210 30% 35%;            /* Muted dark teal */
+    --muted-foreground: 210 20% 65%;
 
-    --border: 220 14% 80%;
-    --input: 220 14% 80%;
-    --ring: 180 100% 28%;
+    --border: 210 40% 25%;
+    --input: 210 40% 25%;
+    --ring: 180 80% 30%;
 
     --radius: 0.75rem;
-
-    /* Utility Colors */
-    --deep-navy: 204 47% 20%;
-    --rich-teal: 180 100% 28%;
-    --vibrant-gold: 42 100% 50%;
-    --terracotta-orange: 24 100% 45%;
-    --off-white: 0 0% 97%;
   }
 
   .dark {
-    --background: 204 47% 5%;
-    --foreground: 0 0% 97%;
+    --background: 210 40% 10%;
+    --foreground: 210 20% 95%;
 
-    --card: 204 47% 10%;
-    --card-foreground: 0 0% 97%;
+    --card: 180 70% 20%;
+    --card-foreground: 210 20% 95%;
 
-    --popover: 204 47% 10%;
-    --popover-foreground: 0 0% 97%;
+    --popover: 210 40% 12%;
+    --popover-foreground: 210 20% 95%;
 
-    --primary: 180 100% 28%;
-    --primary-foreground: 0 0% 10%;
+    --primary: 180 80% 30%;
+    --primary-foreground: 210 20% 15%;
 
-    --secondary: 42 100% 50%;
-    --secondary-foreground: 0 0% 10%;
+    --secondary: 45 100% 50%;
+    --secondary-foreground: 210 20% 15%;
 
-    --accent: 24 100% 45%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 28 90% 45%;
+    --accent-foreground: 210 20% 95%;
 
     --destructive: 0 80% 40%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive-foreground: 210 20% 95%;
 
-    --border: 204 47% 20%;
-    --input: 204 47% 20%;
-    --ring: 180 100% 28%;
+    --border: 210 40% 20%;
+    --input: 210 40% 20%;
+    --ring: 180 80% 30%;
   }
 
   * {
@@ -86,7 +81,6 @@
   }
 }
 
-/* Custom Utilities */
 @layer utilities {
   .glass-effect {
     @apply backdrop-blur-xl border;
@@ -101,18 +95,18 @@
   }
 
   .teal-glow {
-    box-shadow: 0 0 20px hsl(var(--rich-teal) / 0.3),
-      0 0 40px hsl(var(--rich-teal) / 0.1);
+    box-shadow: 0 0 20px hsl(var(--secondary) / 0.3),
+      0 0 40px hsl(var(--secondary) / 0.1);
   }
 
   .gold-glow {
-    box-shadow: 0 0 20px hsl(var(--vibrant-gold) / 0.3),
-      0 0 40px hsl(var(--vibrant-gold) / 0.1);
+    box-shadow: 0 0 20px hsl(var(--accent) / 0.3),
+      0 0 40px hsl(var(--accent) / 0.1);
   }
 
   .orange-glow {
-    box-shadow: 0 0 20px hsl(var(--terracotta-orange) / 0.3),
-      0 0 40px hsl(var(--terracotta-orange) / 0.1);
+    box-shadow: 0 0 20px hsl(var(--destructive) / 0.3),
+      0 0 40px hsl(var(--destructive) / 0.1);
   }
 }
 
