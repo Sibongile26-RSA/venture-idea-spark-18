@@ -1,43 +1,43 @@
 
 import { Card, CardContent } from "@/components/ui/card";
-import { Lightbulb, Users, DollarSign, Rocket, Target, TrendingUp } from "lucide-react";
+import { DollarSign, Users, TrendingUp, Target, Zap, Lightbulb } from "lucide-react";
 
 const Services = () => {
   const services = [
     {
       icon: DollarSign,
-      title: "Seed & Series A Funding",
-      description: "Strategic capital investment from $100K to $5M to fuel your growth trajectory and scale your operations.",
+      title: "Fueling Success",
+      description: "Investments from $100K to $5M that power your growth and amplify your impact.",
       gradient: "from-bright-orange/20 to-vibrant-violet/20"
     },
     {
       icon: Users,
-      title: "Mentorship & Advisory",
-      description: "Access to our network of successful entrepreneurs, industry experts, and seasoned advisors.",
+      title: "Guides Who Get You",
+      description: "Mentors and experts who champion your vision and sharpen your competitive edge.",
       gradient: "from-electric-teal/20 to-bright-orange/20"
     },
     {
-      icon: Rocket,
-      title: "Business Development",
-      description: "Strategic partnerships, customer introductions, and go-to-market strategy development.",
+      icon: Target,
+      title: "Partners That Propel",
+      description: "Connections and collaborations that open doors and drive results.",
       gradient: "from-vibrant-violet/20 to-electric-teal/20"
     },
     {
-      icon: Target,
-      title: "Market Validation",
-      description: "Data-driven market research and validation to refine your product-market fit strategy.",
+      icon: Zap,
+      title: "Proof That Matters",
+      description: "Data and insights that validate your product-market fit with certainty.",
       gradient: "from-electric-teal/20 to-vibrant-violet/20"
     },
     {
       icon: TrendingUp,
-      title: "Growth Strategy",
-      description: "Scalable growth frameworks and operational excellence to maximize your market potential.",
+      title: "Growth That Goes Far",
+      description: "Scalable strategies to unlock your full market potential.",
       gradient: "from-bright-orange/20 to-electric-teal/20"
     },
     {
       icon: Lightbulb,
-      title: "Innovation Support",
-      description: "Technical resources, R&D guidance, and innovation labs to accelerate product development.",
+      title: "Innovation in Action",
+      description: "Tech, R&D, and tools that bring your breakthrough ideas to life.",
       gradient: "from-vibrant-violet/20 to-bright-orange/20"
     }
   ];
@@ -47,10 +47,14 @@ const Services = () => {
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-20">
           <h2 className="text-5xl font-bold text-charcoal-gray mb-6 bg-gradient-to-r from-electric-teal to-vibrant-violet bg-clip-text text-transparent">
-            How We Accelerate Your Success
+            Our Mission
           </h2>
-          <p className="text-xl text-charcoal-gray/80 max-w-3xl mx-auto leading-relaxed">
-            Our comprehensive support ecosystem is designed to transform promising startups into industry leaders
+          <p className="text-xl text-charcoal-gray/80 max-w-3xl mx-auto leading-relaxed mb-8">
+            At VEmpower Ventures, we don't just invest — we empower movements. By combining capital, mentorship, partnerships, and a thriving ecosystem, we help bold ideas scale fast and last long.
+          </p>
+          <h3 className="text-3xl font-bold text-bright-orange mb-4">Driving Impact Together</h3>
+          <p className="text-lg text-charcoal-gray/70 max-w-2xl mx-auto">
+            Scaling Vision into Impact by empowering startups with capital, connections, and guidance to become industry leaders.
           </p>
         </div>
 
@@ -73,6 +77,12 @@ const Services = () => {
               </CardContent>
             </Card>
           ))}
+        </div>
+
+        <div className="mt-16 text-center">
+          <p className="text-2xl font-bold text-bright-orange">
+            Let's turn your vision into the next big impact.
+          </p>
         </div>
       </div>
     </section>

@@ -31,43 +31,43 @@ const Hero = () => {
         </div>
         
         <div className="glass-card rounded-3xl p-8 mb-8 max-w-4xl mx-auto">
-          <p className="text-2xl text-charcoal-gray mb-4 leading-relaxed font-light">
-            Empowering the next generation of innovative startups through strategic investment and partnership
-          </p>
+          <h2 className="text-4xl font-bold text-charcoal-gray mb-6 leading-tight">
+            Fueling Bold Ideas into Global Movements
+          </h2>
           
-          <p className="text-lg text-charcoal-gray/80 mb-6">
-            We provide capital, mentorship, and resources to transform bold ideas into successful businesses that shape the future
+          <p className="text-xl text-charcoal-gray/80 mb-6 leading-relaxed">
+            Empowering the next generation of innovative startups through strategic investment and partnership
           </p>
 
           <div className="flex items-center justify-center gap-2 text-electric-teal">
             <Sparkles className="w-5 h-5 animate-pulse" />
-            <span className="text-sm font-medium">Catalyst for your Vision</span>
+            <span className="text-sm font-medium">Igniting innovation with smart investments</span>
             <Sparkles className="w-5 h-5 animate-pulse delay-500" />
           </div>
         </div>
 
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
           <Button size="lg" className="bg-gradient-to-r from-bright-orange to-vibrant-violet hover:from-bright-orange/90 hover:to-vibrant-violet/90 text-pure-white px-10 py-6 text-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-2xl orange-glow">
-            Submit Your Pitch
+            Ready to Pitch Your Idea?
             <ArrowRight className="ml-3 w-6 h-6" />
           </Button>
           <Button variant="outline" size="lg" className="glass-effect border-electric-teal/50 text-electric-teal hover:bg-electric-teal/10 hover:text-electric-teal px-10 py-6 text-xl transition-all duration-300 shadow-xl neon-glow">
-            Learn More
+            Our Mission
           </Button>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
           <div className="glass-card rounded-2xl p-8 border border-electric-teal/20 hover:border-electric-teal/40 transition-all duration-300 group">
             <h3 className="text-4xl font-bold text-electric-teal mb-3 group-hover:scale-110 transition-transform duration-300">$50M+</h3>
-            <p className="text-charcoal-gray/80 font-medium">Total Valuation</p>
+            <p className="text-charcoal-gray/80 font-medium">Portfolio Value</p>
           </div>
           <div className="glass-card rounded-2xl p-8 border border-bright-orange/20 hover:border-bright-orange/40 transition-all duration-300 group">
-            <h3 className="text-4xl font-bold text-bright-orange mb-3 group-hover:scale-110 transition-transform duration-300">9+</h3>
-            <p className="text-charcoal-gray/80 font-medium">Portfolio Companies</p>
+            <h3 className="text-4xl font-bold text-bright-orange mb-3 group-hover:scale-110 transition-transform duration-300">250%+</h3>
+            <p className="text-charcoal-gray/80 font-medium">Average Growth</p>
           </div>
           <div className="glass-card rounded-2xl p-8 border border-vibrant-violet/20 hover:border-vibrant-violet/40 transition-all duration-300 group">
             <h3 className="text-4xl font-bold text-vibrant-violet mb-3 group-hover:scale-110 transition-transform duration-300">190+</h3>
-            <p className="text-charcoal-gray/80 font-medium">Nations Empowered</p>
+            <p className="text-charcoal-gray/80 font-medium">Countries Reached</p>
           </div>
         </div>
       </div>
