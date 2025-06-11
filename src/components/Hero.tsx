@@ -32,7 +32,7 @@ const Hero = () => {
         
         <div className="glass-card rounded-3xl p-8 mb-8 max-w-4xl mx-auto">
           <h2 className="text-4xl font-bold text-charcoal-gray mb-6 leading-tight">
-            Fueling Bold Ideas into Global Movements
+            !!!Fueling Bold Ideas into Global Movements
           </h2>
           
           <p className="text-xl text-charcoal-gray/80 mb-6 leading-relaxed">
