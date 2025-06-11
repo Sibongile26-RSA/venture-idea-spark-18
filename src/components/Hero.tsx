@@ -1,6 +1,7 @@
 
 import { Button } from "@/components/ui/button";
-import { ArrowRight, TrendingUp } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import VEmpowerLogo from "./VEmpowerLogo";
 
 const Hero = () => {
   return (
@@ -14,7 +15,7 @@ const Hero = () => {
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 text-center text-white">
         <div className="flex items-center justify-center mb-6">
-          <TrendingUp className="w-12 h-12 text-blue-400 mr-4" />
+          <VEmpowerLogo size="lg" className="mr-4" />
           <h1 className="text-6xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
             VEmpower Ventures
           </h1>

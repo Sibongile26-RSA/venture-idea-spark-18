@@ -1,5 +1,6 @@
 
-import { TrendingUp, Mail, MapPin, Linkedin, Twitter } from "lucide-react";
+import { Mail, MapPin, Linkedin, Twitter } from "lucide-react";
+import VEmpowerLogo from "./VEmpowerLogo";
 
 const Footer = () => {
   return (
@@ -9,7 +10,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center mb-4">
-              <TrendingUp className="w-8 h-8 text-blue-400 mr-3" />
+              <VEmpowerLogo size="md" className="mr-3" />
               <h3 className="text-2xl font-bold">VEmpower Ventures</h3>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
